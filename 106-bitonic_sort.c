@@ -8,7 +8,7 @@
  * @array: sub-array to sort
  * @size: size of the sub-array
  */
-void bitonic_compare(char ups, int *array, size_t size)
+void bit_compare(char ups, int *array, size_t size)
 {
 	size_t i, distance;
 	int swaps;

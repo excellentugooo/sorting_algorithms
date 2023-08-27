@@ -15,7 +15,7 @@ size_t part(int *array, ssize_t low, ssize_t high, size_t size)
 {
 	int swapped, point;
 
-	pointt = array[high];
+	point = array[high];
 	while (low <= high)
 	{
 		while (array[low] < point)
