@@ -1,12 +1,12 @@
 #include "deck.h"
 
 /**
- * get_value - gets the relative value of a card from it's string value
+ * getval - gets the relative value of a card from it's string value
  * @str: string value of the card
  *
  * Return: relative value of the card (0 through 12)
  */
-int get_value(const char *str)
+int getval(const char *str)
 {
 	int i;
 	char *card[13] = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9",
@@ -47,7 +47,7 @@ void swap_node(deck_node_t **head, deck_node_t *node)
  */
 void sort_deck(deck_node_t **deck)
 {
-	char swap = 1, card1, card2;
+	char swap = 1, d1, d2;
 	deck_node_t *current;
 
 	if (deck == NULL || *deck == NULL || (*deck)->next == NULL)
@@ -58,9 +58,9 @@ void sort_deck(deck_node_t **deck)
 		swap = 0;
 		while (current->next != NULL)
 		{
-			card1 = get_value(current->card->value) + 13 * current->card->kind;
-			card2 = get_value(current->next->card->value) + 13 * current->next->card->kind;
-			if (card1 > card2)
+			d1 = getval(current->card->value) + 13 * current->card->kind;
+			d2 = getval(current->next->card->value) + 13 * current->next->card->kind;
+			if (d1 > d2)
 			{
 				swap_node(deck, current);
 				swap = 1;
@@ -73,9 +73,9 @@ void sort_deck(deck_node_t **deck)
 		swap = 0;
 		while (current->prev != NULL)
 		{
-			card1 = get_value(current->card->value) + 13 * current->card->kind;
-			card2 = get_value(current->prev->card->value) + 13 * current->prev->card->kind;
-			if (card1 < card2)
+			d1 = getval(current->card->value) + 13 * current->card->kind;
+			d2 = getval(current->prev->card->value) + 13 * current->prev->card->kind;
+			if (d1 < d2)
 			{
 				swap_node(deck, current->prev);
 				swap = 1;
