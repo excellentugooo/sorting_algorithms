@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * pow - calculates a positive power of 10
+ * power10 - calculates a positive power of 10
  * @power: power of 10 to calculate
  *
  * Return: the power of 10
