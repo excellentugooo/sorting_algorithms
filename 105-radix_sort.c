@@ -6,7 +6,7 @@
  *
  * Return: the power of 10
  */
-unsigned int pow(unsigned int power)
+unsigned int power10(unsigned int power)
 {
 	unsigned int i, answer;
 
@@ -32,7 +32,7 @@ unsigned int count_sort(int *array, size_t size, unsigned int digit)
 	size_t j, temp, total = 0;
 	unsigned int cp1, cp2, sortted = 0;
 
-	cp2 = pow(digit - 1);
+	cp2 = power10(digit - 1);
 	cp1 = cp2 * 10;
 	dup = malloc(sizeof(int) * size);
 	if (dup == NULL)

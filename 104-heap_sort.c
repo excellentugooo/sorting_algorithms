@@ -41,7 +41,7 @@ void make(int *array, size_t size)
 
 	for (source = ((size - 1) - 1) / 2; 1; source--)
 	{
-		sift_down(array, source, size - 1, size);
+		sift(array, source, size - 1, size);
 		if (source == 0)
 			break;
 	}
